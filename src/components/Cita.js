@@ -1,6 +1,7 @@
+import {Card,Button} from 'reactstrap';
+
 const Cita = ({ cita, eliminarCita }) => (
-  <div className="citas-container">
-    <div className="cita">
+    <Card className="cita">
       <p>
         Paciente: <span>{cita.paciente}</span>
       </p>
@@ -11,7 +12,7 @@ const Cita = ({ cita, eliminarCita }) => (
         Franja de edad: <span>{cita.edad} años</span>
       </p>
       <p>
-        Vacuna asignada: <span>{cita.vacuna}</span>
+        Area medica Elegida: <span>{cita.vacuna}</span>
       </p>
       <p>
         Fecha: <span>{cita.fecha}</span>
@@ -20,14 +21,20 @@ const Cita = ({ cita, eliminarCita }) => (
         Hora: <span>{cita.hora}</span>
       </p>
 
-      <button
+      <Button
         onClick={() => eliminarCita(cita.id)}
-        className="button eliminar u-full-width"
+        color = 'danger'
       >
         Eliminar &times;
-      </button>
-    </div>
-  </div>
+      </Button>
+
+      <Button
+        onClick={() => eliminarCita(cita.id)}
+        color = 'success'
+      >
+        Modificar &times;
+      </Button>
+  </Card>
 );
 
 export default Cita;

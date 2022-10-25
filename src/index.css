@@ -8,25 +8,47 @@ body {
   background: rgb(51, 119, 181);
   background: linear-gradient(
     180deg,
-    rgba(51, 119, 181, 1) 0%,
-    rgba(52, 92, 205, 0.8505602924763656) 26%,
-    rgba(91, 155, 213, 1) 86%
+    rgb(255, 255, 255) 26%,
+    rgb(255, 255, 255) 86%
   );
   min-height: 100%;
   padding-bottom: 5rem;
 }
-h1,
-h2 {
-  color: rgb(48, 48, 48);
+
+.cita {
+  box-shadow: 60px;
+}
+
+header{
+  background-color: rgb(48, 48, 48);
   padding: 3rem 0;
   text-align: center;
-  text-shadow: 0px 0px 3px white;
   text-transform: uppercase;
+  border-radius: 2px, 3px;
 
-  font-family: "Staatliches", cursive;
+  font-family: "Courier New", cursive;
   letter-spacing: 1px;
 }
 
+h2 {
+  color: rgb(255, 255, 255);
+  padding: 3rem 0;
+  text-align: center;
+
+  font-family: "Courier New", cursive;
+  letter-spacing: 1px;
+  
+}
+
+h1 {
+    color: rgb(255, 255, 255);
+  padding: 3rem 0;
+  text-align: Center;
+
+  font-family: "Courier New", cursive;
+  letter-spacing: 1px;
+
+}
 .lista-citas .media {
   border-bottom: 1px solid #e1e1e1;
   padding-bottom: 3rem;
@@ -43,10 +65,6 @@ h2 {
 }
 .lista-citas .media-body span {
   font-weight: bold;
-}
-
-label {
-  color: rgb(48, 48, 48);
 }
 
 input[type="date"],

@@ -1,6 +1,8 @@
 import { useState } from "react";
 import { v4 as uuidv4 } from "uuid";
 import PropTypes from "prop-types";
+import 'bootstrap/dist/css/bootstrap.min.css';
+import {Button, FormGroup, Input, Label} from 'reactstrap'
 
 const Formulario = ({ crearCita }) => {
   // Crear State de Citas
@@ -66,26 +68,25 @@ const Formulario = ({ crearCita }) => {
 
   return (
     <>
-      <h2>Crear Cita para vacunación</h2>
-
+    
       {error ? (
         <p className="alerta-error">Todos los campos son obligatorios</p>
       ) : null}
 
-      <form onSubmit={submitCita}>
-        <label>Nombre del paciente</label>
-        <input
+      {"   "};
+      <form class = "label" onSubmit={submitCita}>
+        <Label sm={4}>Nombre del paciente</Label>
+        <Input
           type="text"
           name="paciente"
-          className="u-full-width"
           placeholder="Nombre paciente"
           onChange={actualizarState}
           value={paciente}
         />
 
         {/*   */}
-        <label>Nombre del acompañante</label>
-        <input
+        <Label>Nombre del acompañante</Label>
+        <Input
           type="text"
           name="acompañante"
           className="u-full-width"
@@ -95,7 +96,7 @@ const Formulario = ({ crearCita }) => {
         />
 
         {/* */}
-        <label htmlFor="edad">Edad del paciente</label>
+        <Label htmlFor="edad">Edad del paciente</Label>
         <select
           name="edad"
           className="u-full-width"
@@ -115,28 +116,22 @@ const Formulario = ({ crearCita }) => {
         {/*   */}
 
         {/* */}
-        <label htmlFor="vacuna">Vacuna asignada</label>
+        <Label htmlFor="vacuna">Area Medica</Label>
         <select
           name="vacuna"
           className="u-full-width"
           onChange={actualizarState}
           value={vacuna}
         >
-          <option value="Pfizer - BioNTech">Pfizer - BioNTech</option>
-          <option value="Astrazeneca">Astrazeneca</option>
-          <option value="Sputnik V">Sputnik V</option>
-          <option value="Moderna">Moderna</option>
-          <option value="Johnson &amp; Johnson / Janssen">
-            Johnson &amp; Johnson / Janssen
-          </option>
-          <option value="Sanofi/GSK">Sanofi/GSK</option>
-          <option value="Novamax">Novamax</option>
-          <option value="Curevac">Curevac</option>
+          <option value="Medicina General"  >Medicina General</option>
+          <option value="Reumatologo">Reumatologo</option>
+          <option value="Ginecologo">Ginecologo</option>
+          <option value="Otorrinolaringólogo">Otorrinolaringólogo</option>
         </select>
 
         {/*   */}
-        <label>Fecha de vacunación</label>
-        <input
+        <Label>Fecha Cita</Label>
+        <Input
           type="date"
           name="fecha"
           className="u-full-width"
@@ -145,8 +140,8 @@ const Formulario = ({ crearCita }) => {
         />
 
         {/*   */}
-        <label>Hora de vacunación</label>
-        <input
+        <Label>Hora Cita</Label>
+        <Input
           type="time"
           name="hora"
           className="u-full-width"
@@ -155,13 +150,7 @@ const Formulario = ({ crearCita }) => {
         />
 
         {/*   */}
-        <button
-          type="submit"
-          className="u-full-width button-primary"
-          onChange={actualizarState}
-        >
-          Agregar Cita
-        </button>
+        <Button color = "success" onChange={actualizarState}>Agregar Cita</Button>
       </form>
     </>
   );

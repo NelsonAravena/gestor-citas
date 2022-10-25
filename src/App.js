@@ -1,6 +1,8 @@
 import { useState, useEffect } from "react";
 import Cita from "./components/Cita";
 import Formulario from "./components/Formulario";
+import 'bootstrap/dist/css/bootstrap.min.css';
+import {Table, Button, Container, Modal, Modalbody, ModalHeader, FormGroup, ModalFooter} from 'reactstrap'
 
 function App() {
   // Guardar citas en localstorage para que no se borren
@@ -38,7 +40,13 @@ function App() {
 
   return (
     <>
-      <h1>Administrador de citas para vacunación</h1>;
+    <header>
+      <h1>Administrador de citas Medicas</h1>;
+      <h2>Crear cita medica</h2>
+    </header>
+
+    <body>
+      {" "}
       <div className="container">
         <div className="row">
           <div className="form">
@@ -52,6 +60,7 @@ function App() {
           </div>
         </div>
       </div>
+    </body>
     </>
   );
 }
