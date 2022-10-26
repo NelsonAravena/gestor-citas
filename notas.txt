@@ -1,6 +1,0 @@
-Proyecto de administrador de citas a pacientes
-
-Inicio del proyecto: 21 de mayo 2021 06:30am
-Finalización del proyecto: 21 de mayo 10:00
-
-Herramientas utilizadas: React JS, Skeleton(bootstrap), uuid
